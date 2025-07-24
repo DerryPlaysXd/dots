@@ -100,6 +100,8 @@ echo "Polybar config installed successfully!"
 echo "Installing AwesomeWM config..."
 mkdir -p ~/.config/awesome/
 cp .config/awesome/rc.lua ~/.config/awesome/rc.lua
+cp .config/awesome/autorun.sh ~/.config/awesome/
+chmod +x ~/.config/awesome/autorun.sh
 echo "Awesome config installed successfully!"
 
 # NVIM config
