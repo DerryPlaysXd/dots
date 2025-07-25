@@ -1,6 +1,19 @@
 # Information!
 Hi! This is my set up of Awesome Window Manager.
 
+## Packages
+Includes:
+```
+awesome
+polybar
+alacritty
+Brave browser
+GIT
+virt-manager and all it's dependencies
+steam
+discord
+```
+
 ## Dislaimer
 At the moment the script is not full. Awesome might not launch if you don't have the correct drivers installed and the script currently also doesn't install xorg, x11 or anything else.
 
