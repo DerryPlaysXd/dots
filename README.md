@@ -38,4 +38,7 @@ Add execution rights to the script
 chmod +x install.sh
 ```
 
+```
+./install.sh
+```
 Everything should happen automatically.
