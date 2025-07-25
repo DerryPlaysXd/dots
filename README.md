@@ -2,13 +2,13 @@
 Hi! This is my set up of Awesome Window Manager.
 
 ## Packages
-Includes:
+Script includes (more to be added for full out of the box experience):
 ```
 awesome
 polybar
 alacritty
 Brave browser
-GIT
+git
 virt-manager and all it's dependencies
 steam
 discord
