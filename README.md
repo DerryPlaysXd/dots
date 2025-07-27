@@ -9,7 +9,6 @@ polybar
 alacritty
 Brave browser
 git
-virt-manager and all it's dependencies
 steam
 discord
 ```
