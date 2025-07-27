@@ -7,72 +7,72 @@ sudo pacman -Syu --needed --noconfirm git base-devel
 echo "Needed dependencies installed succesfully!"
 
 # Install needed packages
-# Installing yay (AUR Helper)
-echo "Installing yay (AUR Helper)..."
-mkdir ~/yay-temp
-git clone https://aur.archlinux.org/yay.git ~/yay-temp
-cd ~/yay-temp
+# Installing paru (AUR Helper)
+echo "Installing paru (AUR Helper)..."
+mkdir ~/paru-temp
+git clone https://aur.archlinux.org/paru.git ~/paru-temp
+cd ~/paru-temp
 makepkg -si
-echo "Yay installed succesfully!"
-rm -rf ~/yay-temp
+echo "Paru installed succesfully!"
+rm -rf ~/paru-temp
 
 # Installing software dependencies
 # AwesomeWM
 echo "Installing AwesomeWM..."
-yay -Sy --needed --noconfirm awesome
+paru -Sy --needed --noconfirm awesome
 echo "AwesomeWM installed successfully!"
 
 # Picom
-yay -S --needed --noconfirm picom
+paru -S --needed --noconfirm picom
 
 # SDDM
 echo "Installing SDDM..."
-yay -S --needed --noconfirm sddm
+paru -S --needed --noconfirm sddm
 sudo systemctl enable sddm
 
 # Brave Browser
 echo "Installing Brave Browser..."
-yay -S --needed --noconfirm brave-bin
+paru -S --needed --noconfirm brave-bin
 echo "Brave Browser installed successfully!"
 
 # Discord
 echo "Installing Discord..."
-yay -S --needed --noconfirm discord
+paru -S --needed --noconfirm discord
 echo "Discord installed successfully!"
 
 # Steam
 echo "Installing Steam..."
-yay -S --needed --noconfirm steam
+paru -S --needed --noconfirm steam
 echo "Steam installed successfully!"
-
-# Virt-manager
-echo "Installing virt-manager..."
-yay -S --needed --noconfirm virt-manager qemu vde2 ebtables iptables-nft nftables dnsmasq bridge-utils ovmf
-echo "Virt-manager and all it's dependencies installed successfully!"
 
 # Polybar
 echo "Installing Polybar..."
-yay -S --needed --noconfirm polybar 
+paru -S --needed --noconfirm polybar 
 echo "Polybar installed successfully!"
 
 # Nitrogen
 echo "Installing Nitrogen..."
-yay -S --needed --noconfirm nitrogen
+paru -S --needed --noconfirm nitrogen
 echo "Nitrogen installed successfully!"
 
 # Rofi
 echo "Installing Rofi..."
-yay -S --needed --noconfirm rofi
+paru -S --needed --noconfirm rofi
 echo "Rofi installed successfully!"
+
+# Fish
+echo "Installing Fish..."
+paru -S --needed --noconfirm fish
+echo "Fish installed successfully!"
 
 # NVIM
 echo "Installing NVIM..."
-yay -S --needed --noconfirm nvim
+paru -S --needed --noconfirm nvim
 echo "NVIM installed successfully!"
 
 # Alacritty
 echo "Installing Alacritty..."
-yay -S --needed --noconfirm alacritty
+paru -S --needed --noconfirm alacritty
 echo "Alacritty successfully installed!"
 
 

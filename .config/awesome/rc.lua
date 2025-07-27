@@ -413,8 +413,6 @@ awful.rules.rules = {
 	{ rule = { instance = "steam" }, properties = { tag = "4" } },
 
 	{ rule = { class = terminal }, properties = { tag = "2" } },
-
-	{ rule = { instance = "virt-manager" }, properties = { tag = "6" } },
 }
 -- }}}
 
@@ -454,6 +452,5 @@ awful.spawn.with_shell("polybar")
 awful.spawn.with_shell("brave")
 awful.spawn.with_shell("steam")
 awful.spawn.with_shell("discord")
-awful.spawn.with_shell("virt-manager")
 awful.spawn.with_shell("nitrogen --random ~/Wallpapers --set-zoom-fill")
 awful.spawn.with_shell("~/.config/awesome/autorun.sh")
