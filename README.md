@@ -11,6 +11,7 @@ Brave browser
 git
 steam
 discord
+fish (shell)
 ```
 
 ## Dislaimer
