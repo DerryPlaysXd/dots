@@ -29,6 +29,7 @@ paru -S --needed --noconfirm picom
 echo "Installing SDDM..."
 paru -S --needed --noconfirm sddm
 sudo systemctl enable sddm
+echo "SDDM installed successfully!"
 
 # Brave Browser
 echo "Installing Brave Browser..."
