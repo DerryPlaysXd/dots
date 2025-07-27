@@ -3,7 +3,7 @@
 
 # Installing needed dependencies
 echo "Installing git, base-devel..."
-sudo pacman -Syu --needed --noconfirm git base-devel
+sudo pacman -Syu --needed --noconfirm wget git base-devel
 echo "Needed dependencies installed succesfully!"
 
 # Install needed packages
@@ -90,6 +90,33 @@ echo "Installing Rofi theme..."
 mkdir -p ~/.local/share/rofi/themes
 cp .local/share/rofi/themes/nord.rasi ~/.local/share/rofi/themes
 echo "Rofi theme installed successfully!"
+
+# Fish config
+echo "Installing Fish config"
+mkdir -p ~/.config/fish
+cp -r .config/fish/* ~/.config/fish
+read -p "It's recommended to download mesloNF fonts for compatibility reasons. Download now? (Y/N) " answer
+if [[ "$answer" =~ ^[Yy]$ ]]; then
+	echo "Downloading and setting up mesloNF..."
+	mkdir ~/fonts-temp
+	cd ~/fonts-temp
+	wget "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_regular.ttf?raw=true"
+	wget "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold.ttf?raw=true"
+	wget "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_italic.ttf?raw=true"
+	wget "https://github.com/IlanCosman/tide/blob/assets/fonts/mesloLGS_NF_bold_italic.ttf?raw=true"
+	sudo mkdir -p /usr/share/fonts/TTF
+	sudo mv mesloLGS_NF_regular.ttf /usr/share/fonts/TTF
+	sudo mv mesloLGS_NF_bold.ttf /usr/share/fonts/TTF
+	sudo mv mesloLGS_NF_italic.ttf /usr/share/fonts/TTF
+	sudo mv mesloLGS_NF_bold_italic./usr/share/fonts/TTF
+	fc-cache -fv
+	echo "MesloNF fonts successfully installed!"
+else
+	echo "Font installation skipped."
+fi
+sudo chsh /usr/bin/fish root
+chsh /usr/bin/fish $whoami
+echo "Fish config installed successfully!"
 
 # Polybar config
 echo "Installing Polybar config..."
