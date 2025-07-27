@@ -15,6 +15,7 @@ cd ~/paru-temp
 makepkg -si
 echo "Paru installed succesfully!"
 rm -rf ~/paru-temp
+cd dots
 
 # Installing software dependencies
 # AwesomeWM
@@ -23,6 +24,7 @@ paru -Sy --needed --noconfirm awesome
 echo "AwesomeWM installed successfully!"
 
 # Picom
+echo "Installing Picom..."
 paru -S --needed --noconfirm picom
 
 # SDDM
@@ -111,9 +113,11 @@ if [[ "$answer" =~ ^[Yy]$ ]]; then
 	sudo mv mesloLGS_NF_bold_italic./usr/share/fonts/TTF
 	fc-cache -fv
 	echo "MesloNF fonts successfully installed!"
+	cd ~/dots
 else
 	echo "Font installation skipped."
 fi
+cd ~/dots
 sudo chsh /usr/bin/fish root
 chsh /usr/bin/fish $whoami
 echo "Fish config installed successfully!"
