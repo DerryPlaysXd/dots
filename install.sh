@@ -50,7 +50,7 @@ echo "Steam installed successfully!"
 
 # Polybar
 echo "Installing Polybar..."
-paru -S --needed --noconfirm polybar 
+paru -S --noconfirm polybar 
 echo "Polybar installed successfully!"
 
 # Nitrogen
